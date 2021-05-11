@@ -1,0 +1,37 @@
+# POST /login
++ Parameters
+    + Body
+                {
+                    "email": "demo@usuario.com",
+                    "password": "pipjY7-guknaq-nancex"
+
+                }
+
++ Response 201 (application/json)
+
+    + Body 
+
+               {
+                    "error": "",
+                    "data": {
+                        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvbGEiLCJwYXNzd29yZCI6ImFkaW9zIiwiaWF0IjoxNjIwNzY5OTU4fQ.PvgyGbxWPG0X9q8l4qhZ9ilfMgRtzHWGARWnPW_x8uo"
+                    },
+                    "method": "POST"
+               }
+    + Schema
+
+                {
+                    "type": "object",
+                    "properties": {
+                        "error": {
+                            "type": "string"
+                        },
+                        "data": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+
+                            }
+                        }
+                    }
+                }
