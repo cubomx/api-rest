@@ -32,6 +32,61 @@
                                 "type": "string"
 
                             }
+                        },
+                        "method" {
+                            "type": "string"
                         }
                     }
                 }
+
+
+# GET /me
++ Parameters
+    + Headers
+                Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvbGEiLCJwYXNzd29yZCI6ImFkaW9zIiwiaWF0IjoxNjIwNzY5OTU4fQ.PvgyGbxWPG0X9q8l4qhZ9ilfMgRtzHWGARWnPW_x8uo
++ Response 200 (application/json)
+
+    + Body 
+
+            {
+                "error": "",
+                "data": {
+                    "email": "demo@usuario.com",
+                },
+                "method": "GET"
+            }
+    
+    + Schema
+
+            {
+                "type": "object",
+                    "properties": {
+                        "error": {
+                            "type": "string"
+                        },
+                        "data": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+
+                            }
+                        }
+                    }
+            }
+
+
+# POST /get-links
++ Parameters
+    + Headers
+                    Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhvbGEiLCJwYXNzd29yZCI6ImFkaW9zIiwiaWF0IjoxNjIwNzY5OTU4fQ.PvgyGbxWPG0X9q8l4qhZ9ilfMgRtzHWGARWnPW_x8uo
+    + Body
+                {
+                    "url": "https://nodejs.org/dist/latest-v14.x/docs/api/",
+
+                }
+
++ Response 200 (application/json)
+
+    + Headers
+
+                    Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet

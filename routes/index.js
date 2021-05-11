@@ -37,7 +37,7 @@ router.get("/me", ( (req, res) => {
     bearer = bearerAuth(users,  bearer, req, res )
     if (bearer !== null){
         var user = users.get(bearer);
-        response.success( req, res, user, 200);
+        response.success( req, res, {emal: user.email} , 200);
     }
     
 }))
